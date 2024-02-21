@@ -126,3 +126,41 @@ elif not is_magician:
 #for loops
 for item in [1, 2, 3, 4, 5]:
     print(item)
+
+#nesting is also allowed
+for item in (1, 2, 3, 4):
+    for x in ['a', 'b', 'c']:
+        print(item, x)
+
+#iterable means a collection (a list, a dictionary, a tuple) that can be iterated over
+#iterate means go through one by one check each item
+        
+user = {
+    name: 'Golem',
+    age: 5000,
+    'can_swim': False
+}
+
+for item in user.items(): #this dot notation gives the key value pairs from a dictionary
+    print(item)
+
+for key, value, in user.items():
+    print(key, value)
+
+#below an exercise
+my_list = [1,2,3,4,5,6,7,8,9,10]
+
+sum = 0
+
+for item in my_list:
+  sum = sum + item
+
+print(sum)
+
+#range is a special type of object that produces a sequence of intergers from start to stop
+for number in range(0, 100):
+    print(number)
+#with this we looped 100 times
+#also comes with a third parameter, how many to step by
+for item in range(0, 10, 2): #a negative number in the third spot will run the list backwards
+    print(item)
