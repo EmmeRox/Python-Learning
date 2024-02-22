@@ -164,6 +164,54 @@ for number in range(0, 100):
 #also comes with a third parameter, how many to step by
 for item in range(0, 10, 2): #a negative number in the third spot will run the list backwards
     print(item)
+    
+#enumerate
+for i,char in enumerate('Hello'):
+  print(i, char)
+
+#iterates over the index of the item
+#useful if you need the index counter of the item you're looping through
+
+for i,char in enumerate(list(range(100))):
+  if char == 50:
+    print(f'index of 50 is: {i}')
+
+#while loops
+#while condition, similar to JS while loops
+#same danger of infinite loops
+
+i = 0
+while i < 50:
+  print(i)
+  i += 1
+else:
+  print('done with all the work')
+#else statments can also be used with while loops
+
+#for simple loops or iterating over iterable objects, for loops are great
+#dont know how long it will take to loop through something, use while loops
+  
+#exercise #1
+
+picture = [
+  [0,0,0,1,0,0,0],
+  [0,0,1,1,1,0,0],
+  [0,1,1,1,1,1,0],
+  [1,1,1,1,1,1,1],
+  [0,0,0,1,0,0,0],
+  [0,0,0,1,0,0,0]
+]
+
+#iterate over picture
+#if 0 -> print ''
+#if 1 -> print *
+for list in picture:
+  for pixel in list:
+    if pixel == 0:
+      print(' ', end = ' ')
+    elif pixel == 1:
+      print('*', end = ' ')
+  print(' ')
 
 #practice problem: multiply each number by 5 raised to the number of digits of each number ie multiply(3) == 15 as in 3 * 5**1
     
