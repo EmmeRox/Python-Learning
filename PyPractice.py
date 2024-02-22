@@ -164,3 +164,13 @@ for number in range(0, 100):
 #also comes with a third parameter, how many to step by
 for item in range(0, 10, 2): #a negative number in the third spot will run the list backwards
     print(item)
+
+#practice problem: multiply each number by 5 raised to the number of digits of each number ie multiply(3) == 15 as in 3 * 5**1
+    
+def multiply(n):
+    num = 0
+    digits = str(n)
+    for digit in digits:
+        num = 5 ** float(digit) 
+    return n * num
+        
