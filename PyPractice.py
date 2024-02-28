@@ -213,6 +213,22 @@ for list in picture:
       print('*', end = ' ')
   print(' ')
 
+  #check for duplicates
+
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+#create a holder list to hold the duplicates
+duplicates = []
+#loop through the letters inside original list
+for letter in some_list:
+  #count just counts how many instances
+  if some_list.count(letter) > 1:
+    #if the count is more than 1, it is a duplicate
+    if letter not in duplicates:
+      #first check if letter isn't already in the holder list
+      duplicates.append(letter)
+      #append that letter
+print(duplicates)
+
 #practice problem: multiply each number by 5 raised to the number of digits of each number ie multiply(3) == 15 as in 3 * 5**1
     
 def multiply(n):
